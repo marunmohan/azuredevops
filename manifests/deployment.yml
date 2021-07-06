@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: marunmohanazuredevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: marunmohanazuredevops
+  template:
+    metadata:
+      labels:
+        app: marunmohanazuredevops 
+    spec:
+      containers:
+        - name: marunmohanazuredevops 
+          image: akscontainerregistry1983.azurecr.io/marunmohanazuredevops
+          ports:
+          - containerPort: 80
